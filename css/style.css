@@ -1,0 +1,276 @@
+
+/* ========================================
+   NEXO FOOD — IDENTIDADE VISUAL GLOBAL
+   ======================================== */
+
+:root {
+  --verde: #173f35;
+  --verde-hover: #245b4b;
+  --verde-claro: #edf3e9;
+  --laranja: #d87528;
+  --laranja-claro: #fff0e3;
+  --creme: #f8f6ef;
+  --branco: #ffffff;
+  --texto: #26352e;
+  --texto-suave: #69716b;
+  --borda: #e4e8df;
+  --sombra: 0 8px 24px rgba(23, 63, 53, 0.07);
+  --sombra-hover: 0 16px 36px rgba(23, 63, 53, 0.12);
+  --raio: 16px;
+  --transicao: 0.25s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+body {
+  margin: 0;
+  background: var(--creme);
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  transition: color var(--transicao);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--verde);
+  color: var(--branco);
+}
+
+/* LOGO */
+
+.logo {
+  display: inline-block;
+  color: var(--verde);
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: var(--laranja);
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--branco);
+}
+
+/* BOTÕES SECUNDÁRIOS */
+
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 12px 20px;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  background: var(--branco);
+  color: var(--verde);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background var(--transicao),
+    border-color var(--transicao),
+    color var(--transicao),
+    transform var(--transicao),
+    box-shadow var(--transicao);
+}
+
+.secondary-button:hover {
+  border-color: var(--verde);
+  background: var(--verde-claro);
+  transform: translateY(-2px);
+}
+
+.secondary-button:active {
+  transform: translateY(0);
+}
+
+/* BOTÕES PRINCIPAIS */
+
+.button {
+  transition:
+    background var(--transicao),
+    transform var(--transicao),
+    box-shadow var(--transicao);
+}
+
+.button:hover {
+  box-shadow: 0 6px 16px rgba(23, 63, 53, 0.15);
+}
+
+/* TÍTULOS E SEÇÕES */
+
+.section-title {
+  margin-top: 0;
+  color: var(--verde);
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.7px;
+}
+
+.section-heading {
+  margin-bottom: 25px;
+}
+
+.section-heading > p {
+  color: var(--texto-suave);
+  line-height: 1.8;
+}
+
+.featured-footer {
+  margin-top: 35px;
+  text-align: center;
+}
+
+/* LINKS DE NAVEGAÇÃO */
+
+.site-header nav a {
+  transition: color var(--transicao);
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+  color: var(--laranja);
+}
+
+/* CARTÕES */
+
+.product-card,
+.category-card {
+  box-shadow: 0 2px 8px rgba(23, 63, 53, 0.025);
+}
+
+.product-card {
+  transition:
+    transform var(--transicao),
+    box-shadow var(--transicao),
+    border-color var(--transicao);
+}
+
+.product-card:hover {
+  border-color: #d9e2d7;
+  box-shadow: var(--sombra-hover);
+}
+
+.category-card {
+  transition:
+    transform var(--transicao),
+    box-shadow var(--transicao),
+    border-color var(--transicao);
+}
+
+/* IMAGEM DA SEÇÃO SOBRE */
+
+.about-visual img,
+.about-section img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* RODAPÉ */
+
+.site-footer {
+  margin-top: 70px;
+  padding: 42px 4%;
+  background: var(--verde);
+  color: var(--branco);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.footer-links a {
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #f3b47d;
+}
+
+.footer-bottom {
+  margin-top: 25px !important;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+}
+
+/* ACESSIBILIDADE */
+
+:focus-visible {
+  outline: 3px solid var(--laranja);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .site-footer {
+    margin-top: 50px;
+    padding: 32px 5%;
+  }
+
+  .footer-links {
+    gap: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

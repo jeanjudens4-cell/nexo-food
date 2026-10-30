@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NEXO FOOD | Descubra novas receitas</title>
+
+  <meta
+    name="description"
+    content="Descubra receitas deliciosas, explore novos sabores e encontre inspiração para cozinhar todos os dias."
+  >
+
+  <meta name="theme-color" content="#173f35">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/receitas.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+
+ 
+<script src="js/receitas.js" defer></script>
+<script src="js/favoritos.js" defer></script>
+<script src="js/busca.js" defer></script>
+</head>
+
+<body>
+  <!-- CABEÇALHO -->
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="NEXO FOOD - Página inicial">
+      NEXO <span>FOOD</span>
+    </a>
+
+    <nav aria-label="Navegação principal">
+      <a href="index.html" aria-current="page">Início</a>
+      <a href="pages/receitas.html">Receitas</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#sobre">Sobre</a>
+      <a href="pages/favoritos.html">♥ Favoritos</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- BANNER PRINCIPAL -->
+    <section class="hero">
+      <div class="hero-content">
+        <span class="hero-label">SABORES PARA TODOS OS MOMENTOS</span>
+
+        <h1>Descubra o prazer de cozinhar.</h1>
+
+        <p>
+          Encontre receitas incríveis, descubra novos sabores
+          e transforme ingredientes simples em momentos especiais.
+        </p>
+
+        <div class="hero-actions">
+          <a href="pages/receitas.html" class="button">
+            Explorar receitas
+          </a>
+
+          <a href="#categorias" class="secondary-button">
+            Descobrir categorias
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img
+          src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85"
+          alt="Prato colorido com ingredientes frescos"
+          fetchpriority="high"
+        >
+      </div>
+    </section>
+
+    <!-- PESQUISA -->
+    <section class="search-section" aria-labelledby="search-title">
+      <h2 id="search-title">O que você quer cozinhar hoje?</h2>
+
+      <form class="recipe-search" id="recipe-search">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Ex.: bolo de chocolate, salada..."
+          aria-label="Pesquisar receitas por nome ou categoria"
+        >
+
+        <button type="submit" class="button">
+          Buscar receitas
+        </button>
+      </form>
+    </section>
+
+    <!-- CATEGORIAS -->
+    <section
+      class="categories-section"
+      id="categorias"
+      aria-labelledby="categories-title"
+    >
+      <div class="section-heading">
+        <span class="recipe-category">EXPLORE</span>
+        <h2 class="section-title" id="categories-title">
+          Encontre sua inspiração
+        </h2>
+        <p>Escolha uma categoria e descubra novas possibilidades.</p>
+      </div>
+
+      <div class="categories-list">
+        <a
+          class="category-card"
+          href="pages/receitas.html?categoria=Café%20da%20manhã"
+        >
+          <span class="category-icon" aria-hidden="true">☀️</span>
+          <h3>Café da manhã</h3>
+          <p>Comece o dia com sabor.</p>
+        </a>
+
+        <a
+          class="category-card"
+          href="pages/receitas.html?categoria=Almoço"
+        >
+          <span class="category-icon" aria-hidden="true">🍲</span>
+          <h3>Almoço</h3>
+          <p>Ideias para suas refeições.</p>
+        </a>
+
+        <a
+          class="category-card"
+          href="pages/receitas.html?categoria=Jantar"
+        >
+          <span class="category-icon" aria-hidden="true">🍽️</span>
+          <h3>Jantar</h3>
+          <p>Finalize o dia com algo especial.</p>
+        </a>
+
+        <a
+          class="category-card"
+          href="pages/receitas.html?categoria=Sobremesa"
+        >
+          <span class="category-icon" aria-hidden="true">🍰</span>
+          <h3>Sobremesas</h3>
+          <p>Um toque doce para seu dia.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- RECEITAS EM DESTAQUE -->
+    <section
+      class="featured-section"
+      id="receitas-destaque"
+      aria-labelledby="featured-title"
+    >
+      <div class="section-heading">
+        <span class="recipe-category">FEITAS PARA VOCÊ</span>
+
+        <h2 class="section-title" id="featured-title">
+          Receitas para experimentar
+        </h2>
+
+        <p>
+          Descubra algumas das receitas disponíveis no NEXO FOOD.
+        </p>
+      </div>
+
+      <div class="recipe-grid" id="featured-recipes">
+        <p>Carregando receitas...</p>
+      </div>
+
+      <p class="empty-message" id="empty-recipes" hidden>
+        Não encontramos receitas para sua pesquisa.
+        Experimente outro termo.
+      </p>
+
+      <div class="featured-footer">
+        <a href="pages/receitas.html" class="button">
+          Ver todas as receitas
+        </a>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="about-section" id="sobre">
+      <div>
+        <span class="recipe-category">NOSSA IDEIA</span>
+
+        <h2>Cozinhar também é criar memórias.</h2>
+
+        <p>
+          O NEXO FOOD é um site de receitas desenvolvido para ajudar
+          pessoas a descobrir pratos, explorar ingredientes e encontrar
+          inspiração na cozinha.
+        </p>
+
+        <p>
+          De receitas tradicionais a novos sabores, queremos tornar
+          a experiência de cozinhar mais simples, criativa e acessível.
+        </p>
+
+        <a href="pages/receitas.html" class="button">
+          Descobrir receitas
+        </a>
+      </div>
+
+      <div class="about-visual">
+        <img
+          src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=85"
+          alt="Cozinha organizada para preparar receitas"
+          loading="lazy"
+        >
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+    <a class="logo footer-logo" href="index.html">NEXO FOOD</a>
+
+    <p>Inspiração para cozinhar, descobrir e compartilhar.</p>
+
+    <div class="footer-links">
+      <a href="index.html">Início</a>
+      <a href="pages/receitas.html">Receitas</a>
+      <a href="pages/favoritos.html">Favoritos</a>
+    </div>
+
+    <p class="footer-bottom">
+      © 2026 NEXO FOOD. Projeto acadêmico desenvolvido em grupo.
+    </p>
+  </footer>
+</body>
+</html>

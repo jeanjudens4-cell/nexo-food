@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Explorar Receitas | NEXO FOOD</title>
+  <meta
+    name="description"
+    content="Encontre receitas por nome, categoria e ingredientes disponíveis."
+  >
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/receitas.css">
+  <link rel="stylesheet" href="../css/responsivo.css">
+
+  <script src="../js/receitas.js" defer></script>
+<script src="../js/favoritos.js" defer></script>
+<script src="../js/receitas-pagina.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="logo" href="../index.html">NEXO FOOD</a>
+
+    <nav aria-label="Navegação principal">
+      <a href="../index.html">Início</a>
+      <a href="receitas.html" aria-current="page">Receitas</a>
+      <a href="favoritos.html">♥ Favoritos</a>
+    </nav>
+  </header>
+
+  <main class="recipe-list-page">
+    <section class="recipe-list-hero">
+      <span class="recipe-category">EXPLORE E DESCUBRA</span>
+
+      <h1>O que vamos cozinhar hoje?</h1>
+
+      <p>
+        Pesquise pratos, escolha uma categoria ou descubra
+        o que preparar com os ingredientes que você tem em casa.
+      </p>
+    </section>
+
+    <section class="recipe-filters" aria-label="Pesquisa de receitas">
+      <h2>Pesquisar receitas</h2>
+
+      <form id="recipe-search" class="recipe-search">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Nome, categoria ou ingrediente..."
+          aria-label="Pesquisar por nome, categoria ou ingrediente"
+        >
+
+        <button type="submit" class="button">Pesquisar</button>
+      </form>
+
+      <div class="ingredient-search-section">
+        <h2>O que você tem na cozinha?</h2>
+
+        <p>
+          Digite os ingredientes separados por vírgula.
+          Exemplo: ovo, tomate, queijo.
+        </p>
+
+        <form id="ingredient-search-form" class="ingredient-search-form">
+          <label for="ingredients-input">Ingredientes disponíveis</label>
+
+          <input
+            type="text"
+            id="ingredients-input"
+            placeholder="Ex.: ovo, tomate, queijo"
+            autocomplete="off"
+          >
+
+          <label for="ingredient-match-mode">Como combinar os ingredientes?</label>
+
+          <select id="ingredient-match-mode">
+            <option value="todos">Receitas com todos os ingredientes</option>
+            <option value="qualquer">Receitas com pelo menos um ingrediente</option>
+          </select>
+
+          <button type="submit" class="button">
+            Encontrar receitas
+          </button>
+
+          <button
+            type="button"
+            id="clear-ingredients"
+            class="secondary-button"
+          >
+            Limpar ingredientes
+          </button>
+        </form>
+      </div>
+
+      <div class="filter-buttons" aria-label="Filtrar por categoria">
+        <button type="button" class="filter-button active"
+                data-categoria="Todas" aria-pressed="true">Todas</button>
+
+        <button type="button" class="filter-button"
+                data-categoria="Café da manhã" aria-pressed="false">Café da manhã</button>
+
+        <button type="button" class="filter-button"
+                data-categoria="Almoço" aria-pressed="false">Almoço</button>
+
+        <button type="button" class="filter-button"
+                data-categoria="Jantar" aria-pressed="false">Jantar</button>
+
+        <button type="button" class="filter-button"
+                data-categoria="Sobremesa" aria-pressed="false">Sobremesas</button>
+
+        <button type="button" class="filter-button"
+                data-categoria="Saudável" aria-pressed="false">Saudáveis</button>
+
+        <button type="button" class="filter-button"
+                data-categoria="Internacional" aria-pressed="false">Internacionais</button>
+      </div>
+    </section>
+
+    <section class="all-recipes-section">
+      <div class="recipe-results-heading">
+        <h2>Receitas disponíveis</h2>
+        <p id="recipe-count" aria-live="polite">Carregando receitas...</p>
+      </div>
+
+      <div id="all-recipes" class="recipe-grid"></div>
+
+      <p id="no-recipes" class="empty-message" hidden>
+        Não encontramos receitas com esses critérios.
+        Experimente outros ingredientes ou remova alguns filtros.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 NEXO FOOD — Receitas para todos os momentos.</p>
+  </footer>
+</body>
+</html>

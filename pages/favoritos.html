@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meus Favoritos | NEXO FOOD</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/receitas.css">
+  <link rel="stylesheet" href="../css/responsivo.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="../index.html" class="logo">NEXO FOOD</a>
+
+      <nav aria-label="Menu principal">
+        <a href="../index.html">Início</a>
+        <a href="receitas.html">Receitas</a>
+        <a href="favoritos.html" aria-current="page">Favoritos ♥</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container favorites-page">
+    <section class="page-heading">
+      <p class="eyebrow">SUA COLEÇÃO</p>
+      <h1>Minhas receitas favoritas ❤️</h1>
+
+      <p>
+        Todas as receitas que você guardar estarão disponíveis aqui.
+      </p>
+
+      <p>
+        Total de receitas salvas:
+        <strong id="favorite-count">0</strong>
+      </p>
+    </section>
+
+    <section id="empty-favorites" class="empty-state" hidden>
+      <h2>Nenhuma receita favorita ainda!</h2>
+
+      <p>
+        Acesse nossas receitas e clique no coração para guardar
+        suas preferidas.
+      </p>
+
+      <a href="receitas.html" class="button">
+        Explorar receitas
+      </a>
+    </section>
+
+    <section
+      id="favorite-recipes"
+      class="recipes-grid"
+      aria-label="Minhas receitas favoritas"
+    ></section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 NEXO FOOD — Feito para quem ama cozinhar.</p>
+    </div>
+  </footer>
+
+  <script src="../js/receitas.js" defer></script>
+  <script src="../js/favoritos.js" defer></script>
+</body>
+</html>
